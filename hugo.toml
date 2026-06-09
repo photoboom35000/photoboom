@@ -30,7 +30,7 @@ defaultContentLanguage = 'fr'
     weight = 30
 
 [params.label]
-    icon = "images/logo.PNG"   # Chemin vers ton fichier dans static/images/
+    icon = "/images/logo.PNG"   # Chemin vers ton fichier dans static/images/
     iconHeight = 100             # Ajuste la hauteur pour que ce soit élégant
 
   # --- CONFIGURATION DES ICONES DE NAVIGATEUR ---
