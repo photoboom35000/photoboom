@@ -231,7 +231,7 @@ body:has(.hero-section) .header {
    5. AJUSTEMENT MOBILE
    ============================================================ */
 @media screen and (max-width: 768px) {
-    .hero-section { height: 45vh; }
+    .hero-section { height: 70vh; }
     .hero-content-text { margin-top: 60px; }
     .hero-content-text h1 { font-size: 2rem; }
     .hero-content-text p { font-size: 1.1rem; }
