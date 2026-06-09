@@ -31,7 +31,7 @@ body:has(.hero-section) .header {
 .hero-section {
     position: relative;
     width: 100%;
-    height: 70vh; /* Ajusté à 70% de l'écran comme demandé */
+    height: 80vh; /* Ajusté à 70% de l'écran comme demandé */
     background-image: url('/images/accueil.webp'); /* Image par défaut (ordinateur) */
     background-size: cover;
     background-position: center;
@@ -384,5 +384,58 @@ body:has(.hero-section) .header {
     }
     #menu a {
         font-size: 0.8rem !important;
+    }
+}
+
+/* ============================================================
+   6. INTÉGRATION DU GOOGLE FORM (PAGE CONTACT)
+   ============================================================ */
+
+/* Conteneur principal qui centre le formulaire dans la page */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* Le "Châssis" du formulaire (Style épuré, bordures fines) */
+.form-wrapper {
+    width: 640px;             /* Largeur max sur ordinateur */
+    height: 1900px;           /* Hauteur demandée pour l'avoir en entier */
+    position: relative;
+    background: #ffffff;
+    
+    /* Bordures plus fines et angles moins arrondis que les vidéos */
+    border-radius: 12px;       /* Angles subtils et modernes */
+    border: 2px solid #f6aeae; /* Bordure très fine et gris clair */
+    
+    /* Ombre portée ultra-légère pour détacher le formulaire du fond */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    
+    overflow: hidden;
+}
+
+/* L'iframe à l'intérieur qui prend toute la place du châssis */
+.form-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ADAPTATION MOBILE : Le formulaire s'adapte à la largeur du smartphone */
+@media screen and (max-width: 768px) {
+    .form-wrapper {
+        width: 100%;          /* Prend toute la largeur disponible sur smartphone */
+        height: 2000px;       /* Sur mobile, le formulaire s'allonge souvent (champs l'un sous l'autre), on augmente un peu la hauteur pour éviter le scroll interne */
+        border-radius: 8px;   /* Encore plus discret sur petit écran */
+    }
+    
+    .form-container {
+        padding: 20px 10px;   /* Réduit les marges sur les côtés pour laisser de la place au texte */
     }
 }

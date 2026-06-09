@@ -37,3 +37,8 @@ defaultContentLanguage = 'fr'
   [params.assets]
     favicon = "/images/logo.webp"
     apple_touch_icon = "/images/logo.webp"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
