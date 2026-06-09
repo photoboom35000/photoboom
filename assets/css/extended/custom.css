@@ -314,7 +314,7 @@ body:has(.hero-section) .header {
         flex-shrink: 0;
     }
     .logo img {
-        max-height: 28px !important; /* Évite que le logo ne déforme la barre */
+        max-height: 40px !important; /* Évite que le logo ne déforme la barre */
         width: auto !important;
     }
 
@@ -340,7 +340,7 @@ body:has(.hero-section) .header {
 
     /* Switch d'image d'accueil au format vertical (Mobile) */
     .hero-section { 
-        background-image: url('/images/3-mobile.webp');
+        background-image: url('/images/accueil-mobile.webp');
         height: 80vh; /* On pousse à 80 pour donner de la hauteur au smartphone */
         padding-top: 80px; /* Évite que la barre de navigation fixe ne cache le haut de l'image */
     }
