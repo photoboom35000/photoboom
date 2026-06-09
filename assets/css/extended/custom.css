@@ -26,16 +26,17 @@ body:has(.hero-section) .header {
 }
 
 /* ============================================================
-   2. HERO SECTION (IMAGE ET TEXTE)
+   2. HERO SECTION (IMAGE, TEXTE & BOUTON RÉSERVER)
    ============================================================ */
 .hero-section {
     position: relative;
     width: 100%;
-    height: 80vh;
-    background-image: url('/images/3.webp');
+    height: 70vh; /* Ajusté à 70% de l'écran comme demandé */
+    background-image: url('/images/3.webp'); /* Image par défaut (ordinateur) */
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column; /* Aligne le texte et le bouton verticalement */
     align-items: center;
     justify-content: center;
 }
@@ -59,7 +60,7 @@ body:has(.hero-section) .header {
     text-align: center;
     padding: 20px;
     max-width: 700px;
-    margin-top: 80px;
+    margin-top: 40px; /* Réduit pour laisser de la place au bouton */
 }
 
 .hero-content-text h1 {
@@ -76,17 +77,40 @@ body:has(.hero-section) .header {
     margin: 0;
 }
 
+/* Le bouton esthétique "Réserver" */
+.hero-btn-reserver {
+    position: relative;
+    z-index: 2; /* Passe au-dessus du dégradé */
+    margin-top: 25px; /* Décolle le bouton sous le texte */
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #111111; /* Noir moderne minimaliste */
+    border: none;
+    border-radius: 50px; /* Style capsule */
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn-reserver:hover {
+    background-color: #f6aeae;
+    transform: translateY(-2px); /* Effet de soulèvement */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* ============================================================
-   3. EN-TÊTE CENTRÉ & SLIDER PLEINE LARGEUR (FULL-BLEED)
+   3. SLIDER AVIS GOOGLE (FULL-BLEED)
    ============================================================ */
 .main-content-wrapper {
     background: transparent;
     padding: 60px 0;
     width: 100%;
-    overflow-x: hidden; /* Évite tout bug de scroll horizontal global */
+    overflow-x: hidden;
 }
 
-/* On centre uniquement le titre et le bouton */
 .google-reviews-header {
     max-width: 1100px;
     margin: 0 auto;
@@ -117,43 +141,38 @@ body:has(.hero-section) .header {
 }
 
 .leave-review-btn:hover {
-    background: #f7f7f7;
+    background: #f6aeae;
     border-color: #bbbbbb;
     transform: translateY(-1px);
 }
 
-/* LE SLIDER REPREND SES DROITS SUR TOUT L'ÉCRAN DÈS LE DÉBUT */
 .reviews-fluid-slider {
     display: flex;
     gap: 24px;
     overflow-x: auto;
     scroll-behavior: smooth;
     width: 100%;
-    
-    /* On applique une marge fixe et légère (40px) à gauche et à droite.
-       Le premier avis se colle ainsi presque au bord de l'écran. */
     padding: 10px 20px 30px 20px;
-    
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch; 
 }
 
-/* Masquage des barres de scroll */
 .reviews-fluid-slider::-webkit-scrollbar {
     display: none;
 }
+
 .reviews-fluid-slider {
     scrollbar-width: none;
 }
 
 /* ============================================================
-   4. DESIGN DES CARTES (STYLE UNIQUE SOURCE)
+   4. DESIGN DES CARTES TEMOIGNAGES & VIDÉOS SHORTS
    ============================================================ */
 .review-card {
     flex: 0 0 340px; 
     scroll-snap-align: center;
     background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid #f6aeae;
     border-radius: 18px; 
     padding: 35px 25px;
     display: flex;
@@ -227,22 +246,7 @@ body:has(.hero-section) .header {
     color: #888888;
 }
 
-/* ============================================================
-   5. AJUSTEMENT MOBILE
-   ============================================================ */
-@media screen and (max-width: 768px) {
-    .hero-section { height: 70vh; }
-    .hero-content-text { margin-top: 60px; }
-    .hero-content-text h1 { font-size: 2rem; }
-    .hero-content-text p { font-size: 1.1rem; }
-    .review-card { flex: 0 0 290px; padding: 25px 20px; } 
-}
-
-/* ============================================================
-   DESIGN SMARTPHONE POUR VIDÉOS VERTICALES (SHORTS)
-   ============================================================ */
-
-/* Le conteneur qui centre le "téléphone" dans la page */
+/* Shorts Vidéos */
 .short-video-container {
     display: flex;
     justify-content: center;
@@ -251,30 +255,22 @@ body:has(.hero-section) .header {
     width: 100%;
 }
 
-/* Le "Châssis" du téléphone */
 .short-video-wrapper {
-    width: 340px;             /* Largeur fixe comme un vrai téléphone sur ordi */
-    aspect-ratio: 9 / 16;      /* Ratio vertical strict */
+    width: 340px;             
+    aspect-ratio: 9 / 16;      
     position: relative;
-    background: #000;          /* Fond noir pour éviter les flashs blancs au chargement */
-    
-    /* Bords modernes & Look premium */
-    border-radius: 35px;       /* Très arrondi comme un iPhone récent */
-    border: 4px solid #f6aeae; /* Bordure fine qui simule le cadre du téléphone */
-    
-    /* Ombre portée très douce et profonde */
+    background: #000;          
+    border-radius: 35px;       
+    border: 4px solid #f6aeae; 
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    
-    overflow: hidden;          /* Coupe la vidéo pour qu'elle suive l'arrondi */
+    overflow: hidden;          
     transition: transform 0.3s ease;
 }
 
-/* Petit effet au survol */
 .short-video-wrapper:hover {
     transform: scale(1.02);
 }
 
-/* La vidéo à l'intérieur */
 .short-video-wrapper iframe {
     position: absolute;
     top: 0;
@@ -284,11 +280,60 @@ body:has(.hero-section) .header {
     border: none;
 }
 
-/* ADAPTATION MOBILE : Le téléphone prend presque toute la largeur */
+/* ============================================================
+   5. AJUSTEMENT MOBILE (GLOBAL & RESPONSIVE)
+   ============================================================ */
+@media screen and (max-width: 768px) {
+    /* Menu mobile horizontal côte à côte avec le logo */
+    .nav {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    #menu {
+        margin-top: 0 !important;
+        display: flex;
+        flex-direction: row !important;
+        gap: 15px; 
+    }
+
+    #menu li {
+        margin: 0 !important;
+    }
+
+    /* Switch d'image d'accueil au format vertical (Mobile First) */
+    .hero-section { 
+        background-image: url('/images/3-mobile.webp'); /* Ton image 1080x1920 */
+        height: 70vh; 
+    }
+    
+    .hero-content-text { 
+        margin-top: 60px; 
+    }
+    
+    .hero-content-text h1 { 
+        font-size: 2rem; 
+    }
+    
+    .hero-content-text p { 
+        font-size: 1.1rem; 
+    }
+    
+    /* Cartes de témoignages sur Mobile */
+    .review-card { 
+        flex: 0 0 290px; 
+        padding: 25px 20px; 
+    } 
+}
+
+/* Ajustement très petits smartphones (Vidéos Shorts) */
 @media screen and (max-width: 480px) {
     .short-video-wrapper {
-        width: 90%;            /* 90% de la largeur du smartphone du client */
-        max-width: 320px;      /* On ne veut pas qu'il soit géant non plus */
-        border-width: 6px;     /* Bordure un peu plus fine sur mobile */
+        width: 90%;            
+        max-width: 320px;      
+        border-width: 6px;     
     }
 }
