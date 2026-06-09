@@ -32,7 +32,7 @@ body:has(.hero-section) .header {
     position: relative;
     width: 100%;
     height: 70vh; /* Ajusté à 70% de l'écran comme demandé */
-    background-image: url('/images/3.webp'); /* Image par défaut (ordinateur) */
+    background-image: url('/images/accueil.webp'); /* Image par défaut (ordinateur) */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -306,7 +306,7 @@ body:has(.hero-section) .header {
 
     /* Switch d'image d'accueil au format vertical (Mobile First) */
     .hero-section { 
-        background-image: url('/images/3-mobile.webp'); /* Ton image 1080x1920 */
+        background-image: url('/images/accueil-mobile.webp'); /* Ton image 1080x1920 */
         height: 70vh; 
     }
     
