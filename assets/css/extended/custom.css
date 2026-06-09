@@ -284,42 +284,84 @@ body:has(.hero-section) .header {
    5. AJUSTEMENT MOBILE (GLOBAL & RESPONSIVE)
    ============================================================ */
 @media screen and (max-width: 768px) {
-    /* Menu mobile horizontal côte à côte avec le logo */
-    .nav {
-        flex-direction: row !important;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
+    /* Barre de navigation moderne en mode "carte flottante" */
+    .header {
+        position: fixed !important; /* Reste visible au défilement (très pratique sur mobile) */
+        top: 10px !important;
+        left: 5% !important;
+        width: 90% !important;
+        background: rgba(255, 255, 255, 0.8) !important; /* Fond blanc translucide */
+        backdrop-filter: blur(10px); /* Effet flou arrière-plan style iPhone */
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 5px 0;
+        z-index: 999 !important;
     }
 
-    #menu {
-        margin-top: 0 !important;
-        display: flex;
+    /* Force le logo et les liens à se mettre côte à côte */
+    .nav {
         flex-direction: row !important;
-        gap: 15px; 
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 8px 15px !important;
+    }
+
+    /* Ajustement de la taille du logo sur mobile */
+    .logo {
+        flex-shrink: 0;
+    }
+    .logo img {
+        max-height: 28px !important; /* Évite que le logo ne déforme la barre */
+        width: auto !important;
+    }
+
+    /* Menu horizontal épuré à droite */
+    #menu {
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 12px !important; /* Espace équilibré entre tes pages */
+        list-style: none;
+        padding: 0;
     }
 
     #menu li {
         margin: 0 !important;
     }
 
-    /* Switch d'image d'accueil au format vertical (Mobile First) */
+    #menu a {
+        font-size: 0.85rem !important; /* Un poil plus petit pour que tout tienne sur une ligne */
+        font-weight: 600 !important;
+        color: #111111 !important;
+    }
+
+    /* Switch d'image d'accueil au format vertical (Mobile) */
     .hero-section { 
-        background-image: url('/images/accueil-mobile.webp'); /* Ton image 1080x1920 */
-        height: 70vh; 
+        background-image: url('/images/3-mobile.webp');
+        height: 80vh; /* On pousse à 80 pour donner de la hauteur au smartphone */
+        padding-top: 80px; /* Évite que la barre de navigation fixe ne cache le haut de l'image */
     }
     
     .hero-content-text { 
-        margin-top: 60px; 
+        margin-top: 20px; 
     }
     
     .hero-content-text h1 { 
-        font-size: 2rem; 
+        font-size: 1.9rem; 
     }
     
     .hero-content-text p { 
-        font-size: 1.1rem; 
+        font-size: 1.05rem; 
+    }
+
+    /* Descend légèrement le bouton pour équilibrer le visuel sur mobile */
+    .hero-btn-reserver {
+        margin-top: 40px; 
+        font-size: 1rem;
+        padding: 12px 28px;
     }
     
     /* Cartes de témoignages sur Mobile */
@@ -335,5 +377,12 @@ body:has(.hero-section) .header {
         width: 90%;            
         max-width: 320px;      
         border-width: 6px;     
+    }
+    /* Si l'écran est vraiment minuscule, on réduit l'espace entre les liens */
+    #menu {
+        gap: 8px !important;
+    }
+    #menu a {
+        font-size: 0.8rem !important;
     }
 }
