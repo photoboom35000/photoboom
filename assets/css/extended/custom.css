@@ -1,0 +1,294 @@
+/* ============================================================
+   1. CONFIGURATION DU CANVAS & RESET PAPERMOD
+   ============================================================ */
+body {
+    background: transparent !important;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+.page-header, .post-header {
+    display: none !important;
+}
+
+body:has(.hero-section) .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important;
+    z-index: 10;
+}
+
+/* ============================================================
+   2. HERO SECTION (IMAGE ET TEXTE)
+   ============================================================ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url('/images/3.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 0.7) 0%, 
+        rgba(255, 255, 255, 0.20) 40%, 
+        rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.hero-content-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    margin-top: 80px;
+}
+
+.hero-content-text h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.hero-content-text p {
+    font-size: 1.25rem;
+    color: #333333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ============================================================
+   3. EN-TÊTE CENTRÉ & SLIDER PLEINE LARGEUR (FULL-BLEED)
+   ============================================================ */
+.main-content-wrapper {
+    background: transparent;
+    padding: 60px 0;
+    width: 100%;
+    overflow-x: hidden; /* Évite tout bug de scroll horizontal global */
+}
+
+/* On centre uniquement le titre et le bouton */
+.google-reviews-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.google-reviews-header h2 {
+    font-size: 2rem;
+    color: #111111;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.leave-review-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #333333;
+    border: 1px solid #dddddd;
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.leave-review-btn:hover {
+    background: #f7f7f7;
+    border-color: #bbbbbb;
+    transform: translateY(-1px);
+}
+
+/* LE SLIDER REPREND SES DROITS SUR TOUT L'ÉCRAN DÈS LE DÉBUT */
+.reviews-fluid-slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    
+    /* On applique une marge fixe et légère (40px) à gauche et à droite.
+       Le premier avis se colle ainsi presque au bord de l'écran. */
+    padding: 10px 20px 30px 20px;
+    
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* Masquage des barres de scroll */
+.reviews-fluid-slider::-webkit-scrollbar {
+    display: none;
+}
+.reviews-fluid-slider {
+    scrollbar-width: none;
+}
+
+/* ============================================================
+   4. DESIGN DES CARTES (STYLE UNIQUE SOURCE)
+   ============================================================ */
+.review-card {
+    flex: 0 0 340px; 
+    scroll-snap-align: center;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 18px; 
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease;
+}
+
+.review-stars {
+    color: #ffb400;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.review-text {
+    font-size: 1rem;
+    color: #222222;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+}
+
+.reviewer-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #555555;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.reviewer-name {
+    font-size: 1.05rem !important;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 4px 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.google-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2c9ac; 
+    color: #ffffff;
+    font-size: 0.65rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.review-date {
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+/* ============================================================
+   5. AJUSTEMENT MOBILE
+   ============================================================ */
+@media screen and (max-width: 768px) {
+    .hero-section { height: 45vh; }
+    .hero-content-text { margin-top: 60px; }
+    .hero-content-text h1 { font-size: 2rem; }
+    .hero-content-text p { font-size: 1.1rem; }
+    .review-card { flex: 0 0 290px; padding: 25px 20px; } 
+}
+
+/* ============================================================
+   DESIGN SMARTPHONE POUR VIDÉOS VERTICALES (SHORTS)
+   ============================================================ */
+
+/* Le conteneur qui centre le "téléphone" dans la page */
+.short-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* Le "Châssis" du téléphone */
+.short-video-wrapper {
+    width: 340px;             /* Largeur fixe comme un vrai téléphone sur ordi */
+    aspect-ratio: 9 / 16;      /* Ratio vertical strict */
+    position: relative;
+    background: #000;          /* Fond noir pour éviter les flashs blancs au chargement */
+    
+    /* Bords modernes & Look premium */
+    border-radius: 35px;       /* Très arrondi comme un iPhone récent */
+    border: 4px solid #f6aeae; /* Bordure fine qui simule le cadre du téléphone */
+    
+    /* Ombre portée très douce et profonde */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    
+    overflow: hidden;          /* Coupe la vidéo pour qu'elle suive l'arrondi */
+    transition: transform 0.3s ease;
+}
+
+/* Petit effet au survol */
+.short-video-wrapper:hover {
+    transform: scale(1.02);
+}
+
+/* La vidéo à l'intérieur */
+.short-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ADAPTATION MOBILE : Le téléphone prend presque toute la largeur */
+@media screen and (max-width: 480px) {
+    .short-video-wrapper {
+        width: 90%;            /* 90% de la largeur du smartphone du client */
+        max-width: 320px;      /* On ne veut pas qu'il soit géant non plus */
+        border-width: 6px;     /* Bordure un peu plus fine sur mobile */
+    }
+}

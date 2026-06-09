@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Photoboom on  </title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Photoboom on  </description>
+    <generator>Hugo -- 0.155.2</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 09 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nos Bornes Photos en Vidéo</title>
+      <link>http://localhost:1313/nos-bornes-photos/</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/nos-bornes-photos/</guid>
+      <description>&lt;div class=&#34;short-video-container&#34;&gt;
+    &lt;div class=&#34;short-video-wrapper&#34;&gt;
+        &lt;iframe 
+            src=&#34;https://www.youtube.com/embed/1g14KFYUrOg&#34; 
+            title=&#34;YouTube Short&#34; 
+            allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; 
+            allowfullscreen&gt;
+        &lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;short-video-container&#34;&gt;
+    &lt;div class=&#34;short-video-wrapper&#34;&gt;
+        &lt;iframe 
+            src=&#34;https://www.youtube.com/embed/1g14KFYUrOg&#34; 
+            title=&#34;YouTube Short&#34; 
+            allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; 
+            allowfullscreen&gt;
+        &lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/tarifs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tarifs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photoboom</title>
+      <link>http://localhost:1313/accueil/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/accueil/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

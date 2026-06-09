@@ -1,0 +1,39 @@
+baseURL = 'https://photoboom.eu/'
+languageCode = 'fr-fr'
+title = ' '
+theme = 'PaperMod'
+defaultContentLanguage = 'fr'
+
+[params]
+  # On dit à PaperMod de ne pas utiliser son format d'accueil automatique
+  # pour nous laisser le contrôle total dans notre fichier _index.md
+  homeInfoParams = false
+  defaultTheme = "light"  # Force le mode clair (ou "dark" si tu préfères le sombre)
+  disableThemeToggle = true # Désactive le bouton de changement de mode
+
+  [[menu.main]]
+    identifier = "nos-bornes-photos"
+    name = "Nos bornes photos"
+    url = "/nos-bornes-photos/"
+    weight = 10
+
+[[menu.main]]
+    identifier = "tarifs"
+    name = "Tarifs"
+    url = "/tarifs/"
+    weight = 20
+
+[[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 30
+
+[params.label]
+    icon = "images/logo.PNG"   # Chemin vers ton fichier dans static/images/
+    iconHeight = 100             # Ajuste la hauteur pour que ce soit élégant
+
+  # --- CONFIGURATION DES ICONES DE NAVIGATEUR ---
+  [params.assets]
+    favicon = "/images/logo.PNG"
+    apple_touch_icon = "/images/logo.PNG"
