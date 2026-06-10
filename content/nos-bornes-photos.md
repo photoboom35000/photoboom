@@ -6,9 +6,10 @@ draft: false
 
 {{< youtube-short "1g14KFYUrOg" >}}
 
-{{< youtube-short "wS8o5KfLP5A" >}}
+{{< youtube-short "rU5BbExeZVs" >}}
+
+{{< youtube-short "8OelnKq5nao" >}}
 
 {{< youtube-short "NYT5Rv7nhKo" >}}
 
-{{< youtube-short "8OelnKq5nao" >}}
 
