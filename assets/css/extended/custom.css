@@ -128,7 +128,34 @@ body:has(.hero-section) .header {
     font-size: 2rem;
     color: #111111;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Réduit pour coller la note globale */
+}
+
+/* Style du bloc note globale sous le titre */
+.google-global-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px; /* Donne de l'espace avant le bouton */
+}
+
+.google-global-rating .rating-number {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #111111;
+}
+
+.google-global-rating .rating-stars {
+    color: #ffb400; /* Jaune Google */
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.google-global-rating .rating-count {
+    font-size: 0.9rem;
+    color: #666666;
+    font-weight: 500;
 }
 
 .leave-review-btn {
@@ -169,6 +196,61 @@ body:has(.hero-section) .header {
 
 .reviews-fluid-slider {
     scrollbar-width: none;
+}
+
+/* Style spécifique pour la carte "Voir plus" */
+.see-more-card {
+    background: #ffffff;
+    border: 2px dashed #f6aeae !important; /* Bordure pointillée rose pour inviter au clic */
+    justify-content: center !important; /* Centre parfaitement tout le contenu à la verticale */
+    gap: 15px;
+}
+
+.google-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-badge-large {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2c9ac; 
+    color: #ffffff;
+    font-size: 1.8rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-weight: 900;
+    box-shadow: 0 4px 10px rgba(242, 201, 172, 0.3);
+}
+
+.see-more-text {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+    margin: 10px 0 !important;
+}
+
+.see-more-btn {
+    display: inline-block;
+    background: #111111;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.see-more-btn:hover {
+    background: #f6aeae;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(246, 174, 174, 0.4);
 }
 
 /* ============================================================

@@ -37,7 +37,27 @@
 &lt;div class=&#34;short-video-container&#34;&gt;
     &lt;div class=&#34;short-video-wrapper&#34;&gt;
         &lt;iframe 
-            src=&#34;https://www.youtube.com/embed/1g14KFYUrOg&#34; 
+            src=&#34;https://www.youtube.com/embed/wS8o5KfLP5A&#34; 
+            title=&#34;YouTube Short&#34; 
+            allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; 
+            allowfullscreen&gt;
+        &lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;short-video-container&#34;&gt;
+    &lt;div class=&#34;short-video-wrapper&#34;&gt;
+        &lt;iframe 
+            src=&#34;https://www.youtube.com/embed/NYT5Rv7nhKo&#34; 
+            title=&#34;YouTube Short&#34; 
+            allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; 
+            allowfullscreen&gt;
+        &lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;short-video-container&#34;&gt;
+    &lt;div class=&#34;short-video-wrapper&#34;&gt;
+        &lt;iframe 
+            src=&#34;https://www.youtube.com/embed/8OelnKq5nao&#34; 
             title=&#34;YouTube Short&#34; 
             allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; 
             allowfullscreen&gt;
