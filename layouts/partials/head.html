@@ -17,7 +17,15 @@ pintrk('page');
   src="https://ct.pinterest.com/v3/?event=init&tid=2613665122722&pd[em]=<hashed_email_address>&noscript=1" />
 </noscript>
 <!-- end Pinterest Tag -->
- 
+
+<!-- Pinterest visite de la page -->
+<script>
+pintrk('track', 'pagevisit', {
+event_id: 'eventId0001'
+});
+</script>
+<!-- end Pinterest visite de la page -->
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
