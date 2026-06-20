@@ -1,0 +1,133 @@
+{{- define "main" }}
+
+<!-- ========================================================
+     HERO TARIFS
+     ======================================================== -->
+<section class="tarifs-hero">
+    <h1>Nos Forfaits</h1>
+    <p>Des souvenirs inoubliables, à votre image</p>
+</section>
+
+<!-- ========================================================
+     GRILLE DES CARTES TARIFS
+     ======================================================== -->
+<section class="tarifs-section">
+    <div class="tarifs-grid">
+
+        <div class="tarif-card">
+            <div class="tarif-label">175 impressions</div>
+            <div class="tarif-price">259<span class="tarif-currency">€</span></div>
+            <div class="tarif-divider"></div>
+            <p class="tarif-ideal">Idéal pour un événement intime</p>
+        </div>
+
+        <div class="tarif-card tarif-card--popular">
+            <div class="tarif-popular-badge">Populaire</div>
+            <div class="tarif-label">350 impressions</div>
+            <div class="tarif-price">339<span class="tarif-currency">€</span></div>
+            <div class="tarif-divider"></div>
+            <p class="tarif-ideal">Parfait pour une soirée entre amis</p>
+        </div>
+
+        <div class="tarif-card">
+            <div class="tarif-label">525 impressions</div>
+            <div class="tarif-price">459<span class="tarif-currency">€</span></div>
+            <div class="tarif-divider"></div>
+            <p class="tarif-ideal">Pour les grandes célébrations</p>
+        </div>
+
+        <div class="tarif-card">
+            <div class="tarif-label">700 impressions</div>
+            <div class="tarif-price">599<span class="tarif-currency">€</span></div>
+            <div class="tarif-divider"></div>
+            <p class="tarif-ideal">Mariage ou événement professionnel</p>
+        </div>
+
+        <div class="tarif-card tarif-card--devis">
+            <div class="tarif-label">+ 700 impressions</div>
+            <div class="tarif-price-devis">Sur devis</div>
+            <div class="tarif-divider"></div>
+            <p class="tarif-ideal">Grands événements &amp; entreprises</p>
+            <a href="/contact" class="tarif-devis-btn">Nous contacter</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========================================================
+     SECTION CE QUI EST INCLUS
+     ======================================================== -->
+<section class="tarifs-inclus-section">
+    <div class="tarifs-inclus-inner">
+
+        <h2 class="tarifs-inclus-title">Tout est inclus</h2>
+        <p class="tarifs-inclus-subtitle">Chaque forfait comprend l'ensemble de ces prestations, sans surprise.</p>
+
+        <div class="inclus-list">
+
+            <div class="inclus-item">
+                <div class="inclus-icon">🚚</div>
+                <div class="inclus-text">
+                    <strong>Livraison, installation &amp; récupération</strong>
+                    <span>Sur le lieu de l'événement (frais kilométriques selon distance)</span>
+                </div>
+            </div>
+
+            <div class="inclus-item inclus-item--design">
+                <div class="inclus-icon">🎨</div>
+                <div class="inclus-text">
+                    <strong>Design personnalisé offert &amp; fait sur mesure</strong>
+                    <span>Un cadre photo unique créé spécialement pour votre événement</span>
+                </div>
+                <div class="design-fan-wrapper">
+                    <div class="design-fan">
+                        <div class="design-fan__card design-fan__card--left">
+                            <img src="/images/design-exemple-1.png" alt="Exemple design 1" />
+                        </div>
+                        <div class="design-fan__card design-fan__card--center">
+                            <img src="/images/design-exemple-2.jpg" alt="Exemple design 2" />
+                        </div>
+                        <div class="design-fan__card design-fan__card--right">
+                            <img src="/images/design-exemple-3.png" alt="Exemple design 3" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inclus-item">
+                <div class="inclus-icon">📸</div>
+                <div class="inclus-text">
+                    <strong>Photos &amp; vidéos numériques illimitées</strong>
+                    <span>Envoyées instantanément par QR code ou SMS</span>
+                </div>
+            </div>
+
+            <div class="inclus-item">
+                <div class="inclus-icon">🖼️</div>
+                <div class="inclus-text">
+                    <strong>Album photo en ligne de l'événement</strong>
+                    <span>Accessible à tous vos invités après la fête</span>
+                </div>
+            </div>
+
+            <div class="inclus-item">
+                <div class="inclus-icon">🛡️</div>
+                <div class="inclus-text">
+                    <strong>Assistance technique incluse</strong>
+                    <span>En cas de coupure de courant ou problème technique, nous gérons</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================
+     CTA FINAL
+     ======================================================== -->
+<section class="tarifs-cta-section">
+    <p>Une question ? Envie de réserver ?</p>
+    <a href="/contact" class="tarifs-cta-btn">Réserver maintenant</a>
+</section>
+
+{{- end }}
