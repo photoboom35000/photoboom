@@ -521,6 +521,31 @@ body:has(.hero-section) .header {
     }
 }
 
+.contact-call-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px 10px;
+}
+
+.contact-call-btn {
+    display: inline-block;
+    background: #111111;
+    color: #ffffff !important;
+    padding: 16px 36px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.contact-call-btn:hover {
+    background: #f6aeae;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(246, 174, 174, 0.4);
+}
+
 /* ============================================================
    7. PAGE TARIFS
    ============================================================ */

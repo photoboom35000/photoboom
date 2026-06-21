@@ -3,6 +3,11 @@ title: "Contact"
 date: 2026-06-09
 draft: false
 ---
+<div class="contact-call-wrapper">
+    <a href="tel:+33664178910" class="contact-call-btn">
+        📞 Appelez-nous
+    </a>
+</div>
 
 <div class="form-container">
     <div class="form-wrapper">

@@ -13,7 +13,12 @@
       <link>http://localhost:1313/contact/</link>
       <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/contact/</guid>
-      <description>&lt;div class=&#34;form-container&#34;&gt;
+      <description>&lt;div class=&#34;contact-call-wrapper&#34;&gt;
+    &lt;a href=&#34;tel:+33664178910&#34; class=&#34;contact-call-btn&#34;&gt;
+        📞 Appelez-nous
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;form-container&#34;&gt;
     &lt;div class=&#34;form-wrapper&#34;&gt;
         &lt;iframe src=&#34;https://docs.google.com/forms/d/e/1FAIpQLSdMYRUhTlnOEhobKX2iBwavaDNInNb8lyI2zMRFmzUgj17_Ag/viewform?embedded=true&#34; frameborder=&#34;0&#34; marginheight=&#34;0&#34; marginwidth=&#34;0&#34;&gt;Chargement…&lt;/iframe&gt;
     &lt;/div&gt;
